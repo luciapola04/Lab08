@@ -1,8 +1,12 @@
 package it.unibo.mvc;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.Border;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -33,15 +37,26 @@ public class MiniGUI {
         canvas.add(write, BorderLayout.CENTER);
         frame.setContentPane(canvas);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+        final JPanel myPanel = new JPanel();
+        myPanel.setLayout(new BoxLayout(myPanel, BoxLayout.X_AXIS));
+        canvas.add(myPanel);
+        myPanel.add(write);
+        final JTextField result = new JTextField("RESULT");
+        canvas.add(result, BorderLayout.NORTH);
+    
         /*
          * Handlers
          */
         write.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                System.out.println(randomGenerator.nextInt());
+                final int n = randomGenerator.nextInt();
+                System.out.println(n);
+                result.setText(String.valueOf(n));
             }
         });
+
     }
 
     private void display() {
@@ -54,6 +69,7 @@ public class MiniGUI {
          * specify the size of a window in pixel: it takes into account the
          * current resolution.
          */
+
         final Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         final int sw = (int) screen.getWidth();
         final int sh = (int) screen.getHeight();
@@ -72,6 +88,7 @@ public class MiniGUI {
          * OK, ready to pull the frame onscreen
          */
         frame.setVisible(true);
+
     }
 
     /**
