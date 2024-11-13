@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.unibo.deathnote.TestDeathNote" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-11-13T17:34:45" hostname="DESKTOP-U466CR5" time="6.372">
+  <properties/>
+  <testcase name="test1()" classname="it.unibo.deathnote.TestDeathNote" time="0.06"/>
+  <testcase name="test2()" classname="it.unibo.deathnote.TestDeathNote" time="0.006"/>
+  <testcase name="test3()" classname="it.unibo.deathnote.TestDeathNote" time="0.028"/>
+  <testcase name="test4()" classname="it.unibo.deathnote.TestDeathNote" time="0.126"/>
+  <testcase name="test5()" classname="it.unibo.deathnote.TestDeathNote" time="6.138"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
